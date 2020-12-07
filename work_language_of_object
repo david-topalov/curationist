@@ -1,0 +1,32 @@
+{
+   "$schema":"http://json-schema.org/draft-04/schema#",
+   "type":"object",
+   "additionalProperties":false,
+   "required":[
+      "value",
+      "lang",
+      "source"
+   ],
+   "properties":{
+      "value":{
+         "type":"string",
+         "description":"The value"
+      },
+      "author":{
+         "description":"Agent responsible for a translation or alternative language information.",
+         "type":"string"
+      },
+      "source":{
+         "$ref":"https://apigateway.amazonaws.com/restapis/2nv2pc3bt5/models/WorkSourceTypeDefinition",
+         "description":"Source of language data (Source, Curationist, Community)"
+      },
+      "lang":{
+         "$ref":"https://apigateway.amazonaws.com/restapis/2nv2pc3bt5/models/WorkLanguageDefinition",
+         "description":"Language in which language data is expressed."
+      },
+      "wikirefid":{
+         "type":"string",
+         "description":"Identifying number from Wikidata"
+      }
+   }
+}
