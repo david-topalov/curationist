@@ -1,0 +1,22 @@
+{
+   "$schema":"http://json-schema.org/draft-04/schema#",
+   "type":"object",
+   "additionalProperties":false,
+   "required":[
+      "href"
+   ],
+   "properties":{
+      "source_institution_name":{
+         "description":"The value",
+         "type":"string"
+      },
+      "href":{
+         "description":"The full URL of the Work on the Source site",
+         "type":"string"
+      },
+      "wikirefid":{
+         "type":"string",
+         "description":"Identifying number from Wikidata, if any."
+      }
+   }
+}
