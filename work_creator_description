@@ -1,0 +1,54 @@
+{
+   "$schema":"http://json-schema.org/draft-04/schema#",
+   "type":"object",
+   "additionalProperties": false,
+   "required":[
+      "source",
+      "lang",
+      "name"
+   ],
+   "properties":{
+      "name":  {
+         "description":"Name of the creator",
+         "type":"string"
+      },
+      "role":{
+         "description":"Role of the person or entity responsible for the creation/making of the Work (artist, editor, publisher, etc.)",
+         "$ref":"https://apigateway.amazonaws.com/restapis/2nv2pc3bt5/models/WorkCreatorRoleTypeDefinition"
+      },
+      "notes":{
+         "description":"Additional information about the person or entity for disambiguation.",
+         "type":"string"
+      },
+      "author":{
+         "description":"Agent responsible for a translation or alternative name, role, or notes.",
+         "type":"string"
+      },
+      "source":{
+         "$ref":"https://apigateway.amazonaws.com/restapis/2nv2pc3bt5/models/WorkSourceTypeDefinition",
+         "description":"Source of the name, role, or notes (Source, Curationist, Community)"
+      },
+      "lang":{
+         "$ref":"https://apigateway.amazonaws.com/restapis/2nv2pc3bt5/models/WorkLanguageDefinition",
+         "description":"Language of the agent name, role, or notes."
+      },
+      "rating":{
+         "description":"Numeric display order of agent name or role when there is more one.",
+         "type":"integer",
+         "minimum": 1,
+         "maximum": 10
+      },
+      "wikirefid":{
+         "type":"string",
+         "description":"Identifying number from Wikidata, if any."
+      },
+      "href":{
+         "description":"Link to a resource about the agent.",
+         "type":"string"
+      },
+      "extent":{
+         "description":"The scope of the agent's contribution to the Work",
+         "type":"string"
+      }
+   }
+}
