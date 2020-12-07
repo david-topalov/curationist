@@ -1,0 +1,36 @@
+{
+   "$schema":"http://json-schema.org/draft-04/schema#",
+   "type":"object",
+   "additionalProperties":false,
+   "required":[
+      "value",
+      "source",
+      "lang"
+   ],
+   "properties":{
+      "value":{
+         "type":"string",
+         "description":"The value"
+      },
+      "type":{
+         "$ref":"https://apigateway.amazonaws.com/restapis/2nv2pc3bt5/models/WorkTopicsTypeDefinition",
+         "description":"Type of subject term (descriptive_topic, personal_name, corporate_name, geographic_place)"
+      },
+      "author":{
+         "description":"Agent responsible for a translation or alternative subject information.",
+         "type":"string"
+      },
+      "source":{
+         "$ref":"https://apigateway.amazonaws.com/restapis/2nv2pc3bt5/models/WorkSourceTypeDefinition",
+         "description":"Source of the subject (Source, Curationist, Community)"
+      },
+      "lang":{
+         "$ref":"https://apigateway.amazonaws.com/restapis/2nv2pc3bt5/models/WorkLanguageDefinition",
+         "description":"Language of the subject term."
+      },
+      "wikirefid":{
+         "type":"string",
+         "description":"Identifying number from Wikidata, if any."
+      }
+   }
+}
