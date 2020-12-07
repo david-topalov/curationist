@@ -1,0 +1,24 @@
+{
+   "$schema":"http://json-schema.org/draft-04/schema#",
+   "type":"string",
+   "enum":[
+      "application/epub+zip",
+      "application/pdf",
+      "audio/mpeg",
+      "audio/mp4",
+      "image/bmp",
+      "image/gif",
+      "image/jpeg",
+      "image/png",
+      "image/tiff",
+      "text/css",
+      "text/csv",
+      "text/html",
+      "text/plain",
+      "text/richtext",
+      "text/xml",
+      "video/JPEG",
+      "video/mp4",
+      "video/quicktime"
+   ]
+}
