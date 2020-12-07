@@ -1,0 +1,36 @@
+ {
+   "$schema": "http://json-schema.org/draft-04/schema#",      
+   "type":"object",
+   "additionalProperties": false,
+   "required":[
+      "source",
+      "lang",
+      "value"
+   ],
+   "properties":{
+      "value":{
+         "type":"string",
+         "description": "The value"
+      },
+      "author":{
+         "type":"string",
+         "description": "Agent responsible for a translation or alternative title."
+      },
+      "source":{
+         "$ref":"https://apigateway.amazonaws.com/restapis/2nv2pc3bt5/models/WorkSourceTypeDefinition",
+         "description": "Source of the title (Source, Curationist, Community)"
+      },
+      "lang":{
+         "$ref":"https://apigateway.amazonaws.com/restapis/2nv2pc3bt5/models/WorkLanguageDefinition",
+         "description": "Language of the title"
+      },
+      "pref":{
+         "type":"boolean",
+         "description": "Preferred title (true, false)"
+      },
+      "wikirefid":{
+         "type":"string",
+         "description": "Identifying number from Wikidata, if any."
+      }
+   }
+}
