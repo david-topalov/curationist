@@ -1,0 +1,37 @@
+{
+   "$schema":"http://json-schema.org/draft-04/schema#",
+   "type":"object",
+   "additionalProperties":false,
+   "required":[
+      "value",
+      "type",
+      "unit",
+      "source"
+   ],
+   "properties":{
+      "value":{
+         "description":"The value",
+         "type":"string"
+      },
+      "type":{
+         "$ref":"https://apigateway.amazonaws.com/restapis/2nv2pc3bt5/models/WorkDimensionTypeDefinition",
+         "description":"Dimension being measured (width, height, depth, etc.)"
+      },
+     "unit":{
+         "$ref":"https://apigateway.amazonaws.com/restapis/2nv2pc3bt5/models/WorkUnitTypeDefinition",
+         "description":"Unit of measurement"
+      },
+      "author":{
+         "description":"Agent responsible for a translation or alternative measurement information.",
+         "type":"string"
+      },
+      "source":{
+         "$ref":"https://apigateway.amazonaws.com/restapis/2nv2pc3bt5/models/WorkSourceTypeDefinition",
+         "description":""
+      },
+      "wikirefid":{
+         "type":"string",
+         "description":"Identifying number from Wikidata, if any."
+      }
+   }
+}
