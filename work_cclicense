@@ -1,0 +1,42 @@
+{
+   "$schema":"http://json-schema.org/draft-04/schema#",
+   "type":"object",
+   "additionalProperties":false,
+   "required":[
+      "copyright_status",
+      "type",
+      "author",
+      "source",
+      "lang"
+   ],
+   "properties":{
+      "copyright_status":{
+         "$ref":"https://apigateway.amazonaws.com/restapis/2nv2pc3bt5/models/WorkRightsTypeDefinition",
+         "description":"Information about the copyright status for a Work. (Public Domain, Creative Commons licenses)"
+      },
+      "type":{
+         "$ref":"https://apigateway.amazonaws.com/restapis/2nv2pc3bt5/models/WorkLicenseTypeDefinition",
+         "description":"CC BY - Credit must be given to the creator, CC 00 - No Rights Reserved"
+      },
+      "notes":{
+         "description":"The optional notes subelement may include any justifications, conditions, or restraints on use, contact or licensing information, or other intellectual property statements as may be desired",
+         "type":"string"
+      },
+      "author":{
+         "description":"Agent responsible for a translation or alternative rights information.",
+         "type":"string"
+      },
+      "source":{
+         "$ref":"https://apigateway.amazonaws.com/restapis/2nv2pc3bt5/models/WorkSourceTypeDefinition",
+         "description":"Source of the rights information (Source, Curationist, Community)"
+      },
+      "lang":{
+         "$ref":"https://apigateway.amazonaws.com/restapis/2nv2pc3bt5/models/WorkLanguageDefinition",
+         "description":"Language of the rights information"
+      },
+      "wikirefid":{
+         "type":"string",
+         "description":"Identifying number from Wikidata, if any."
+      }
+   }
+}
