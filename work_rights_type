@@ -1,0 +1,8 @@
+{
+   "$schema":"http://json-schema.org/draft-04/schema#",
+   "type":"string",
+   "enum":[
+      "public_domain",
+      "creative_commons_licenses"
+   ]
+}
