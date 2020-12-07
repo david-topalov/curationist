@@ -1,0 +1,36 @@
+{
+   "$schema":"http://json-schema.org/draft-04/schema#",
+   "type":"object",
+   "additionalProperties":false,
+   "required":[
+      "value",
+      "source",
+      "lang"
+   ],
+   "properties":{
+      "value":{
+         "type":"string",
+         "description":"The value"
+      },
+      "type":{
+         "$ref":"https://apigateway.amazonaws.com/restapis/2nv2pc3bt5/models/WorkLocationTypeDefinition",
+         "description":"Type of location (creation, discovery, exhibition, performance, publication, repository, site)"
+      },
+      "author":{
+         "description":"Agent responsible for a translation or alternative location information.",
+         "type":"string"
+      },
+      "source":{
+         "$ref":"https://apigateway.amazonaws.com/restapis/2nv2pc3bt5/models/WorkSourceTypeDefinition",
+         "description":"Source of location data (Source, Curationist, Community)"
+      },
+      "lang":{
+         "$ref":"https://apigateway.amazonaws.com/restapis/2nv2pc3bt5/models/WorkLanguageDefinition",
+         "description":"Language in which location is expressed."
+      },
+      "wikirefid":{
+         "type":"string",
+         "description":"Identifying number from Wikidata, if any."
+      }
+   }
+}
