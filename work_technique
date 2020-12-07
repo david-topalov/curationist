@@ -1,0 +1,32 @@
+{
+   "$schema":"http://json-schema.org/draft-04/schema#",
+   "type":"object",
+   "additionalProperties":false,
+   "required":[
+      "value",
+      "source",
+      "lang"
+   ],
+   "properties":{
+      "value":{
+         "description":"The value",
+         "type":"string"
+      },
+      "author":{
+         "description":"Agent responsible for a translation or alternative technique information.",
+         "type":"string"
+      },
+      "source":{
+         "$ref":"https://apigateway.amazonaws.com/restapis/2nv2pc3bt5/models/WorkSourceTypeDefinition",
+         "description":"Source of the technique information (Source, Curationist, Community)"
+      },
+      "lang":{
+         "$ref":"https://apigateway.amazonaws.com/restapis/2nv2pc3bt5/models/WorkLanguageDefinition",
+         "description":"Language of the technique information"
+      },
+      "wikirefid":{
+         "type":"string",
+         "description":"Identifying number from Wikidata, if any."
+      }
+   }
+}
