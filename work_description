@@ -1,0 +1,28 @@
+{
+   "$schema":"http://json-schema.org/draft-04/schema#",
+   "type":"object",
+   "additionalProperties":false,
+   "required":[
+      "value",
+      "source",
+      "lang"
+   ],
+   "properties":{
+      "value":{
+         "type":"string",
+         "description":"The value"
+      },
+      "author":{
+         "description":"Agent responsible for a translation or alternative description.",
+         "type":"string"
+      },
+      "source":{
+         "$ref":"https://apigateway.amazonaws.com/restapis/2nv2pc3bt5/models/WorkSourceTypeDefinition",
+         "description":"Source of the description (Source, Curationist, Community)"
+      },
+      "lang":{
+         "$ref":"https://apigateway.amazonaws.com/restapis/2nv2pc3bt5/models/WorkLanguageDefinition",
+         "description":"Language of description"
+      }
+   }
+}
