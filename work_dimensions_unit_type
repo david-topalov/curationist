@@ -1,0 +1,18 @@
+{
+   "$schema":"http://json-schema.org/draft-04/schema#",
+   "type":"string",
+   "enum":[
+      "kg",
+      "g",
+      "lb",
+      "oz",
+      "mm",
+      "cm",
+      "m",
+      "km",
+      "in",
+      "ft",
+      "yd",
+      "mi"
+   ]
+}
