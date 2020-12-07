@@ -1,0 +1,28 @@
+{
+   "$schema":"http://json-schema.org/draft-04/schema#",
+   "type":"object",
+   "additionalProperties":false,
+   "required":[
+      "value",
+      "lang",
+      "type"
+   ],
+   "properties":{
+      "value":{
+         "type":"string",
+         "description":"The value"
+      },
+      "type":{
+         "$ref":"https://apigateway.amazonaws.com/restapis/2nv2pc3bt5/models/WorkInscriptionTypeDefinition",
+         "description":"Language of inscription"
+      },
+      "author":{
+         "description":"Agent responsible for a translation or alternative transcription.",
+         "type":"string"
+      },
+      "lang":{
+         "$ref":"https://apigateway.amazonaws.com/restapis/2nv2pc3bt5/models/WorkLanguageDefinition",
+         "description":"Language of inscription"
+      }
+   }
+}
