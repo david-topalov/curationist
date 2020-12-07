@@ -1,0 +1,15 @@
+{
+   "$schema":"http://json-schema.org/draft-04/schema#",
+   "type":"string",
+   "enum":[
+      "related_to",
+      "part_of",
+      "larger_context_for",
+      "derived_from",
+      "source_for",
+      "version_of",
+      "version_is",
+      "facsimile_of",
+      "facsimile_is"
+   ]
+}
