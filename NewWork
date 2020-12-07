@@ -1,0 +1,192 @@
+{
+   "$schema":"http://json-schema.org/draft-04/schema#",
+   "type":"object",
+   "additionalProperties":false,   
+   "required":[
+      "title",
+      "creator",
+      "date",
+      "forms",
+      "materials",
+      "cc_license",
+      "source",
+      "record_creator",
+      "import_source",
+      "media_type"
+   ],
+   "properties":{
+      "refid":{
+         "description":"Identifying number from the Source Institution",
+         "type":"string"
+      },
+      "title":{
+         "type":"array",
+         "items":{
+            "$ref":"https://apigateway.amazonaws.com/restapis/2nv2pc3bt5/models/WorkCreateTitleDefinition"
+         }
+      },
+      "creator":{
+         "description":"Creator",
+         "type":"array",
+         "items":{
+            "$ref":"https://apigateway.amazonaws.com/restapis/2nv2pc3bt5/models/WorkCreateCreatorDefinition"
+         }
+      },
+      "cultural_context":{
+         "description":"Cultural Context (Tags)",
+         "type":"array",
+         "items":{
+            "$ref":"https://apigateway.amazonaws.com/restapis/2nv2pc3bt5/models/WorkCreateCulturalContextDefinition"
+         }
+      },
+      "creation_location":{
+         "description":"Creation location; Current location (Tags)",
+         "type":"array",
+         "items":{
+            "$ref":"https://apigateway.amazonaws.com/restapis/2nv2pc3bt5/models/WorkCreateCreationLocationDefinition"
+         }
+      },
+      "language_of_object":{
+         "description":"Language of object (Tags)",
+         "type":"array",
+         "items":{
+            "$ref":"https://apigateway.amazonaws.com/restapis/2nv2pc3bt5/models/WorkCreateLanguageOfObjectDefinition"
+         }
+      },
+      "style_period":{
+         "description":"Style/Movement (Tags)",
+         "type":"array",
+         "items":{
+            "$ref":"https://apigateway.amazonaws.com/restapis/2nv2pc3bt5/models/WorkCreateStyleMovementDefinition"
+         }
+      },
+      "description":{
+         "description":"A free-text note about the Work, including comments, description, or interpretation, that gives additional information not recorded in other categories.",
+         "type":"array",
+         "items":{
+            "$ref":"https://apigateway.amazonaws.com/restapis/2nv2pc3bt5/models/WorkCreateDescriptionDefinition"
+         }
+      },
+      "inscription":{
+         "description":"Transcription of any text in the image to make it searchable.",
+         "type":"array",
+         "items":{
+            "$ref":"https://apigateway.amazonaws.com/restapis/2nv2pc3bt5/models/WorkCreateInscriptionDefinition"
+         }
+      },
+      "topics":{
+         "description":"Topics (Tags)",
+         "type":"array",
+         "items":{
+            "$ref":"https://apigateway.amazonaws.com/restapis/2nv2pc3bt5/models/WorkCreateTopicsDefinition"
+         }
+      },
+      "forms":{
+         "description":"Forms (Tags)",
+         "type":"array",
+         "items":{
+            "$ref":"https://apigateway.amazonaws.com/restapis/2nv2pc3bt5/models/WorkCreateFormsDefinition"
+         }
+      },
+      "materials":{
+         "description":"Materials (Tags)",
+         "type":"array",
+         "items":{
+            "$ref":"https://apigateway.amazonaws.com/restapis/2nv2pc3bt5/models/WorkCreateMaterialsDefinition"
+         }
+      },
+      "dimensions":{
+         "description":"Dimensions - not specified by Curationist, but included in many API data sources",
+         "type":"array",
+         "items":{
+            "$ref":"https://apigateway.amazonaws.com/restapis/2nv2pc3bt5/models/WorkCreateDimensionsDefinition"
+         }
+      },
+      "technique":{
+         "description":"Technique (Tags)",
+         "type":"array",
+         "items":{
+            "$ref":"https://apigateway.amazonaws.com/restapis/2nv2pc3bt5/models/WorkCreateTechniqueDefinition"
+         }
+      },
+      "cc_license":{
+         "description":"CC license",
+         "$ref":"https://apigateway.amazonaws.com/restapis/2nv2pc3bt5/models/WorkCreateCCLicense"
+      },
+      "provenance":{
+         "description":"Provenance",
+         "type":"array",
+         "items":{
+            "$ref":"https://apigateway.amazonaws.com/restapis/2nv2pc3bt5/models/WorkCreateProvenance"
+         }
+      },
+      "source":{
+         "description":"Source Name",
+         "type":"array",
+         "items":{
+            "$ref":"https://apigateway.amazonaws.com/restapis/2nv2pc3bt5/models/WorkCreateSourceDefinition"
+         }
+      },
+      "relation":{
+         "description":"Relationships; Hub; Series",
+         "type":"array",
+         "items":{
+            "$ref":"https://apigateway.amazonaws.com/restapis/2nv2pc3bt5/models/CreateWorkRelationshipsDefinition"
+         }
+      },
+      "record_creator": {
+         "description":"Name of Curationist staff member who created or initiated import of record",
+         "type":"string"
+      },
+      "threads":{
+         "description":"Hashtags associated with the record",
+         "type":"array",
+         "items":{
+            "$ref":"https://apigateway.amazonaws.com/restapis/2nv2pc3bt5/models/CreateWorkThreadsDefinition"
+         }
+      },
+      "date":{
+         "description":"Date (literal); Time Periods (Tags); Year (ISO 8601-1)",
+         "type":"array",
+         "items":{
+            "$ref":"https://apigateway.amazonaws.com/restapis/2nv2pc3bt5/models/CreateWorkDateDefinition"
+         }
+      },
+      "enable_import":{
+         "description":"Indicates that fields should be overwritten from API Source",
+         "type":"boolean"
+      },
+      "import_source":{
+         "description":"How the work was imported (Manual, Keyword API Search, Bulk API Import)",
+         "$ref":"https://apigateway.amazonaws.com/restapis/2nv2pc3bt5/models/WorkImportSourceTypeDefinition"
+      },
+      "literal_url":{
+         "description":"URL used by admins for deduping links",
+         "type":"string"
+      },
+      "staff_note":{
+         "description":"Free text field for indicating issues or questions about Work metadata for internal use and tracking",
+         "type":"string"
+      },
+       "media_type":{
+         "description":"Media type",
+         "$ref":"https://apigateway.amazonaws.com/restapis/2nv2pc3bt5/models/WorkMediaTypeDefinition"
+      },
+      "encoding_format":{
+         "description":"Digital format of the asset (JPG, PNG, MOV, etc.)",
+         "$ref":"https://apigateway.amazonaws.com/restapis/2nv2pc3bt5/models/WorkEncodingFormatDefinition"
+      },
+      "file_size":{
+         "description":"Size of the asset in kilobytes",
+         "type":"integer"
+      },
+      "alt":{
+         "description":"Alt Text",
+         "type":"string"
+      },
+      "creator_str":{
+         "description":"Creator of the digital surrogate",
+         "type":"string"
+      }
+   }
+}
